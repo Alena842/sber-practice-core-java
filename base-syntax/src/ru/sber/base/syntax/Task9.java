@@ -1,6 +1,7 @@
 package ru.sber.base.syntax;
 
 import java.util.Scanner;
+import java.util.Locale;
 
 public class Task9 {
     public static void main(String[] args){
@@ -9,19 +10,22 @@ public class Task9 {
         char a = (char)i;
         Scanner in = new Scanner(System.in);
         while (true) {
-            String B = in.next();
+            String B = in.next().toLowerCase();
             if (B.length() == 1) {
                 char b = B.charAt(0);
-                int j = (int)b;
-                if(i == j){
-                    System.out.println("Верно!");
-                    System.exit(0);
-                }else if(i > j){
-                    System.out.println("Ищи букву, которая после нее в алфавите.");
-                }else{
-                    System.out.println("Ищи букву, которая перед ней в алфавите.");
+                if(b >= 'a' && b <= 'z') {
+                    if (a == b) {
+                        System.out.println("Верно!");
+                        return;
+                    } else if (b <= a) {
+                        System.out.println("Ищи букву, которая после нее в алфавите.");
+                    } else {
+                        System.out.println("Ищи букву, которая перед ней в алфавите.");
+                    }
+                }else {
+                    System.out.println("Введен недопустимый символ");
                 }
-            } else {
+            }else {
                 System.out.println("Введен недопустимый символ");
             }
         }

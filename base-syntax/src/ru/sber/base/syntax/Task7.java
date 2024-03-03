@@ -16,10 +16,10 @@ public class Task7 {
         if(D > 0){
             double X1 = (-b + Math.sqrt(D))/2*a;
             double X2 = (-b - Math.sqrt(D))/2*a;
-            System.out.println("X1 = " + (int)X1 + "; X2 = " + (int)X2);
+            System.out.println("X1 = " + X1 + "; X2 = " + X2);
         }else if(D == 0){
             double X = (-b + Math.sqrt(D))/2*a;
-            System.out.println("X = " + (int)X);
+            System.out.println("X = " + X);
         }else{
             System.out.println("Нет корней");
         }

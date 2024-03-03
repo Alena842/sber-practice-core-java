@@ -8,10 +8,14 @@ public class Task4 {
         Scanner in = new Scanner(System.in);
         int num = in.nextInt();
         int i1 = 0;
-        for(int i = 2; i < num; i++){
+        if(num <= 1){
+            System.out.println("Нет");
+            return;
+        }
+        for(int i = 2; i < num/2; i++){
             if(num%i == 0){
                 System.out.println("Нет");
-                System.exit(i1);
+                return;
             }
         }
         System.out.println("Да");
