@@ -1,7 +1,6 @@
 package ru.sber.base.syntax;
 
 import java.util.Scanner;
-import java.util.Locale;
 
 public class Task9 {
     public static void main(String[] args){
